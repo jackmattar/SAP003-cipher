@@ -9,6 +9,35 @@
     <div id="root">
       <h1>Hello world!</h1>
     </div>
+
+    <section>
+      
+      <form>
+        
+        <p>
+          <label> Deslocamento <br></label>
+          <input type="number" id="displacement" min="0">
+        </p>
+
+        <p>
+          <label> Cifrar <br> </label> 
+          <input type="text" id="textencoded" placeholder="Insira para cifrar">
+          <input type= "submit" id="btncode" value="Cifrar" onclick="cifrar()">
+        </p>
+
+        <p>
+          <label> Decifrar <br></label>
+          <input type="text" id="textdecoded" placeholder="Insira para decifrar">
+          <input type="submit" id="btndecoded" value="Decifrar" onclick="decifrar()">
+        </p> 
+
+      </form>
+
+      <div id="result"> </div> 
+      
+
+    </section>
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
