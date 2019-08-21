@@ -1,59 +1,44 @@
-/*window.cipher = {
-  encode: cipherencode(),
-  decode: cipherdecode()
-};*/
+window.cipher = {
+  encode: encode(),
+  decode: decode()
+};
 
-function encode(){
+function encode(offset, stringencode){
 
   event.preventDefault()
 
+  res= document.getElementById("result")
 
-  let displacement= document.getElementById("offset").value
+  let taketxt= stringencode.toUpperCase()
 
-  let disptonum= Number(displacement)
+  let offset= document.getElementById("offset").value
 
-  let res= document.getElementById("result")
-
+  offset_num= Number(offset)
+ 
   let txtencode= new Array;
   
   let textcipher= new Array;
 
 
-
-  function taketxt(){
-
-  var txtcipher= document.getElementById("stringencode").value
-   return txtcipher.toUpperCase();
-  }
-
-  function uppertxt(txt){
-    return txt.toUpperCase();
-  }
-
-  for (i in taketxt()){
+  for (i in taketxt){
     
-    let n1=  (taketxt().charCodeAt(i))
+    let asciinum=  (taketxt.charCodeAt(i))
    
 
-    if (n1 >= 65 && n1 <= 90){
+    if (asciinum >= 65 && asciinum <= 90){
 
-      let n2 = txtencode.push(n1)
+      let n2 = txtencode.push(asciinum)
 
-      let decodedtxt= ((txtencode[i]) - 65 + disptonum ) % 26 + 65
-      //console.log(decodedtxt)
+      let decodedtxt= ((txtencode[i]) + 65 + offset_num ) % 26 + 65
 
       let novamensagem= String.fromCharCode(decodedtxt)
-      //console.log(novamensagem)
 
       textcipher.push (novamensagem)
-      // console.log(textcipher)
     
-
     } else {
 
-      txtencode.push(taketxt().charAt(i))
-      textcipher.push(taketxt().charAt(i))
-      console.log(textcipher)
+      txtencode.push(taketxt.charAt(i))
+      textcipher.push(taketxt.charAt(i))
 
     }
 
@@ -63,68 +48,45 @@ function encode(){
  return res.innerHTML=(textcipher.join(""))
 }
 
-function decode(){
+function decode(offset, stringdecode){
 
- // event.preventDefault()
+  event.preventDefault()
 
+  stringdecode= document.getElementById("stringdecode").value
 
-  let displacement= document.getElementById("displacement").value
+  res= document.getElementById("result")
 
-  let disptonum= Number(displacement)
+  let taketxt= stringdecode.toUpperCase()
 
-  let res= document.getElementById("result")
+  let offset= document.getElementById("offset").value
 
+  offset_num= Number(offset)
+ 
   let txtencode= new Array;
   
   let textcipher= new Array;
 
 
-
-  function taketxt(){
-
-    var txtcipher= document.getElementById("stringdecoded").value
-   return(uppertxt(txtcipher));
-  }
-
-  function uppertxt(txt){
-    return txt.toUpperCase();
-  }
-
-  for (i in taketxt()){
+  for (i in taketxt){
     
-    let n1=  (taketxt().charCodeAt(i))
+    let asciinum=  (taketxt.charCodeAt(i))
    
 
-    if (n1 >= 65 && n1 <= 90){
+    if (asciinum >= 65 && asciinum <= 90){
 
-      let n2 = txtencode.push(n1)
-      console.log(n2)
+        let n2 = txtencode.push(asciinum)
 
-      let decodedtxt= ((txtencode[i]) - 65 + disptonum ) % 26 + 65
-      //console.log(decodedtxt)
+        let decodedtxt= ((txtencode[i]) + 65 - offset_num ) % 26 + 65
 
-      let novamensagem= String.fromCharCode(decodedtxt)
-      //console.log(novamensagem)
+        let novamensagem= String.fromCharCode(decodedtxt)
 
-      textcipher.push (novamensagem)
-      // console.log(textcipher)
+        textcipher.push (novamensagem)
     
+        } else {
 
-    } else {
+          txtencode.push(taketxt.charAt(i))
+          textcipher.push(taketxt.charAt(i))
 
-      txtencode.push(taketxt().charAt(i))
-      textcipher.push(taketxt().charAt(i))
-      console.log(textcipher)
-
-    }
-
-      textcipher.join
+        }
   }
-  
- return res.innerHTML=(textcipher.join(""))
 }
-
-
-
-
-

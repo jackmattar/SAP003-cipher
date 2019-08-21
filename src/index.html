@@ -16,18 +16,18 @@
         
         <p>
           <label> Deslocamento <br></label>
-          <input type="number" id="displacement" min="0">
+          <input type="number" id="offset">
         </p>
 
         <p>
           <label> Cifrar <br> </label> 
-          <input type="text" id="textencoded" placeholder="Insira para cifrar">
+          <input type="text" id="stringencode" placeholder="Insira para cifrar">
           <input type= "submit" id="btncode" value="Cifrar" onclick="cifrar()">
         </p>
 
         <p>
           <label> Decifrar <br></label>
-          <input type="text" id="textdecoded" placeholder="Insira para decifrar">
+          <input type="text" id="stringdecode" placeholder="Insira para decifrar">
           <input type="submit" id="btndecoded" value="Decifrar" onclick="decifrar()">
         </p> 
 
@@ -37,7 +37,7 @@
       
 
     </section>
-
+  
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
