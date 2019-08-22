@@ -1,0 +1,29 @@
+header{
+    text-align: center;
+  
+  }
+  
+  body{
+   
+  
+  }
+  
+  section{
+  margin: left;
+  background: pink;
+  width: 300px;
+  padding: 10px
+  
+    
+  }
+  
+  input[type=number]{
+  width: 250px;
+  }
+  
+  textarea {   
+      align:center;
+      width:250px;
+      height:200px
+  }
+  

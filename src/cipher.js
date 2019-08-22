@@ -1,6 +1,9 @@
 window.cipher = {
+
   encode: encode,
   decode: decode
+
+
 }
 
 function encode(offset, stringencode){
@@ -13,7 +16,6 @@ function encode(offset, stringencode){
 
   for (i in stringencode){
 
-    stringencode= stringencode.toUpperCase()
     
     let asciinum= stringencode.charCodeAt(i)
 
@@ -27,7 +29,17 @@ function encode(offset, stringencode){
 
       textcipher.push (novamensagem)
     
-    } else {
+    } else if (asciinum >= 97 && asciinum <= 122) {
+
+      let n2 = txtencode.push(asciinum)
+    
+      let decodedtxt= ((txtencode[i]) + 33 + offset) % 26 + 97
+
+      let novamensagem= String.fromCharCode(decodedtxt)
+
+      textcipher.push (novamensagem)
+    
+    } else{
 
       txtencode.push(stringencode.charAt(i))
       textcipher.push(stringencode.charAt(i))
@@ -38,7 +50,6 @@ function encode(offset, stringencode){
   }
   
  return textcipher.join("")
- console.log(textcipher.join(""))
 }
 
 function decode(offset, stringdecode){
@@ -51,7 +62,7 @@ function decode(offset, stringdecode){
 
   for (i in stringdecode){
 
-    stringdecode= stringdecode.toUpperCase()
+    //stringdecode= stringdecode.toUpperCase()
     
     let asciinum= stringdecode.charCodeAt(i)
 
@@ -65,7 +76,17 @@ function decode(offset, stringdecode){
 
       textcipher.push (novamensagem)
     
-    } else {
+    }  else if (asciinum >= 97 && asciinum <= 122) {
+
+      let n2 = txtencode.push(asciinum)
+    
+      let decodedtxt= ((txtencode[i]) + 33 - offset) % 26 + 97
+
+      let novamensagem= String.fromCharCode(decodedtxt)
+
+      textcipher.push (novamensagem)
+    
+    } else{
 
       txtencode.push(stringdecode.charAt(i))
       textcipher.push(stringdecode.charAt(i))
@@ -76,5 +97,4 @@ function decode(offset, stringdecode){
   }
   
  return textcipher.join("")
- console.log(textcipher.join(""))
 }

@@ -23,22 +23,23 @@
 
         <p>
           <label> Cifrar <br> </label> 
-          <input type="text" id="stringencode" placeholder="Insira para cifrar">
+          <textarea id="stringencode" placeholder="Insira para cifrar"></textarea>
+          <br>
           <input type= "submit" id="btncode" value="Cifrar" onclick="cifrar()">
         </p>
 
         <p>
           <label> Decifrar <br></label>
-          <input type="text" id="stringdecode" placeholder="Insira para decifrar">
+          <textarea type="text" id="stringdecode" placeholder="Insira para decifrar"></textarea>
+          <br>
           <input type="submit" id="btndecoded" value="Decifrar" onclick="decifrar()">
         </p> 
 
       </form>
 
-      <div id="result"> </div> 
-      
-
     </section>
+
+      <div id="result"> </div> 
   
     <script src="cipher.js"></script>
     <script src="index.js"></script>
