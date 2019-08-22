@@ -1,35 +1,27 @@
 window.cipher = {
-  encode: encode(),
-  decode: decode()
-};
+  encode: encode,
+  decode: decode
+}
 
 function encode(offset, stringencode){
 
-  event.preventDefault()
-
-  res= document.getElementById("result")
-
-  let taketxt= stringencode.toUpperCase()
-
-  let offset= document.getElementById("offset").value
-
-  offset_num= Number(offset)
- 
   let txtencode= new Array;
   
   let textcipher= new Array;
 
+  offset= Number(offset)
 
-  for (i in taketxt){
+  for (i in stringencode){
+
+    stringencode= stringencode.toUpperCase()
     
-    let asciinum=  (taketxt.charCodeAt(i))
-   
+    let asciinum= stringencode.charCodeAt(i)
 
     if (asciinum >= 65 && asciinum <= 90){
 
       let n2 = txtencode.push(asciinum)
 
-      let decodedtxt= ((txtencode[i]) + 65 + offset_num ) % 26 + 65
+      let decodedtxt= ((txtencode[i]) + 65 + offset) % 26 + 65
 
       let novamensagem= String.fromCharCode(decodedtxt)
 
@@ -37,56 +29,52 @@ function encode(offset, stringencode){
     
     } else {
 
-      txtencode.push(taketxt.charAt(i))
-      textcipher.push(taketxt.charAt(i))
+      txtencode.push(stringencode.charAt(i))
+      textcipher.push(stringencode.charAt(i))
 
     }
 
       textcipher.join
   }
   
- return res.innerHTML=(textcipher.join(""))
+ return textcipher.join("")
+ console.log(textcipher.join(""))
 }
 
 function decode(offset, stringdecode){
 
-  event.preventDefault()
-
-  stringdecode= document.getElementById("stringdecode").value
-
-  res= document.getElementById("result")
-
-  let taketxt= stringdecode.toUpperCase()
-
-  let offset= document.getElementById("offset").value
-
-  offset_num= Number(offset)
- 
   let txtencode= new Array;
   
   let textcipher= new Array;
 
+  offset= Number(offset)
 
-  for (i in taketxt){
+  for (i in stringdecode){
+
+    stringdecode= stringdecode.toUpperCase()
     
-    let asciinum=  (taketxt.charCodeAt(i))
-   
+    let asciinum= stringdecode.charCodeAt(i)
 
     if (asciinum >= 65 && asciinum <= 90){
 
-        let n2 = txtencode.push(asciinum)
+      let n2 = txtencode.push(asciinum)
 
-        let decodedtxt= ((txtencode[i]) + 65 - offset_num ) % 26 + 65
+      let decodedtxt= ((txtencode[i]) + 65 - offset) % 26 + 65
 
-        let novamensagem= String.fromCharCode(decodedtxt)
+      let novamensagem= String.fromCharCode(decodedtxt)
 
-        textcipher.push (novamensagem)
+      textcipher.push (novamensagem)
     
-        } else {
+    } else {
 
-          txtencode.push(taketxt.charAt(i))
-          textcipher.push(taketxt.charAt(i))
+      txtencode.push(stringdecode.charAt(i))
+      textcipher.push(stringdecode.charAt(i))
 
-        }
+    }
+
+      textcipher.join
   }
+  
+ return textcipher.join("")
+ console.log(textcipher.join(""))
 }
