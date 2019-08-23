@@ -15,32 +15,35 @@
     <section>
       
       <form id="form">
-        
-        <p>
-          <label> Chave de deslocamento <br></label>
-          <input type="number" id="offset">
-        </p>
+        <fieldset id="first">
+          <p>
+            <label for="offset" class="offset"> Chave de Deslocamento <br></label>
+            <input type="number" id="offset">
+          </p>
 
-        <p>
-          <label> Cifrar <br> </label> 
-          <textarea id="stringencode" placeholder="Insira para cifrar"></textarea>
-          <br>
-          <input type= "submit" id="btnencode" value="Cifrar">
-        </p>
+          <p>
+            <label for="stringencode" class="strings"> Cifrar Mensagem</label> 
+            <textarea id="stringencode" placeholder="Insira para cifrar"></textarea><br>
+            <input type= "submit" class="btncode" id="btnencode" value="Cifrar">
+          </p>
 
-        <p>
-          <label> Decifrar <br></label>
-          <textarea type="text" id="stringdecode" placeholder="Insira para decifrar"></textarea>
-          <br>
-          <input type="submit" id="btndecoded" value="Decifrar">
-        </p> 
+          <p>
+            <label for="strindecode" class="strings"> Decifrar Mensagem</label>
+            <textarea type="text" id="stringdecode" placeholder="Insira para decifrar"></textarea><br>
+            <input type="submit" class="btndecoded" id="btndecoded" value="Decifrar" >
+          </p> 
 
+
+
+        </fieldset>
       </form>
+        <div class="result">
+          <div id="result"><p>Preencha os dados</p></div>
+        </div> 
 
     </section>
 
-      <div id="result"> </div> 
-  
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
