@@ -1,31 +1,73 @@
 document.getElementById("btnencode").addEventListener("click", cifrar);
 document.getElementById("btndecoded").addEventListener("click", decifrar);
+document.getElementById("btnclear").addEventListener("click", clear);
 
 let stringencode= document.getElementById("stringencode");
 let stringdecode= document.getElementById("stringdecode");
 let offset= document.getElementById("offset");
 let res= document.getElementById("result");
 
-function cifrar() {
+function cifrar(event) {
+  event.preventDefault();
 
-  document.getElementById("form").addEventListener("submit", event => {
+  // document.getElementById("form").addEventListener("submit", event => {
   
-    event.preventDefault();
+  //   event.preventDefault();
 
-    return res.innerHTML=( window.cipher.encode(offset.value, stringencode.value));
-  });
+    if ((offset.value === ""|| offset.value === 0) || stringencode.value === "") {
+
+      return res.innerHTML=("Verifique os dados e tente novamente");
+
+    } else if (offset.value <0) {
+
+      return res.innerHTML=( window.cipher.encode(-offset.value, stringencode.value));
+
+    } else {
+
+      return res.innerHTML=( window.cipher.encode(offset.value, stringencode.value));
+
+    }
+
+//  });
+
 }
 
-cifrar();
+function decifrar(event) {
+  event.preventDefault();
 
-function decifrar() {
-
-  document.getElementById("form").addEventListener("submit", event => {
+  // document.getElementById("form").addEventListener("submit", event => {
   
-    event.preventDefault();
+  //   event.preventDefault();
 
-    return res.innerHTML=( window.cipher.decode(offset.value, stringdecode.value));
-  });
+    if ((offset.value === ""|| offset.value === 0) || stringdecode.value === "") {
+
+      return res.innerHTML=("Verifique os dados e tente novamente");
+ 
+    } else if (offset.value <0) {
+
+      return res.innerHTML=( window.cipher.decode(-offset.value, stringdecode.value));
+
+    } else {
+
+      return res.innerHTML=( window.cipher.decode(offset.value, stringdecode.value));
+
+    }
+
+  // });
+
 }
 
-decifrar();
+function clear(event) {
+  event.preventDefault();
+
+//  document.getElementById("form").addEventListener("submit", event => {
+  
+   
+
+    stringencode.value="";
+    stringdecode.value="";
+    offset.value="";
+    return res.innerHTML=("Preencha os dados");
+  
+//  });
+}
