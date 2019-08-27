@@ -18,7 +18,7 @@ function encode(offset, stringencode) {
 
       txtencode.push(asciinum);
 
-      let decodedtxt= ((txtencode[i]) + 65 + offset) % 26 + 65;
+      let decodedtxt= ((txtencode[i]) - 65 + offset) % 26 + 65;
 
       let novamensagem= String.fromCharCode(decodedtxt);
 
@@ -28,7 +28,7 @@ function encode(offset, stringencode) {
 
       txtencode.push(asciinum);
     
-      let decodedtxt= ((txtencode[i]) + 33 + offset) % 26 + 97;
+      let decodedtxt= ((txtencode[i]) - 97 + offset) % 26 + 97;
 
       let novamensagem= String.fromCharCode(decodedtxt);
 
@@ -65,7 +65,7 @@ function decode(offset, stringdecode) {
     
       txtencode.push(asciinum);
 
-      let decodedtxt= ((txtencode[i]) + 65 - offset) % 26 + 65;
+      let decodedtxt= ((txtencode[i]) - 90 - offset) % 26 + 90;
 
       let novamensagem= String.fromCharCode(decodedtxt);
 
@@ -75,7 +75,7 @@ function decode(offset, stringdecode) {
 
       txtencode.push(asciinum);
     
-      let decodedtxt= ((txtencode[i]) + 33 - offset) % 26 + 97;
+      let decodedtxt= ((txtencode[i]) - 122 - offset) % 26 + 122;
 
       let novamensagem= String.fromCharCode(decodedtxt);
 
