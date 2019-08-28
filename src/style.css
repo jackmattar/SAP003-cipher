@@ -27,7 +27,6 @@ fieldset{
   background: rgba(255, 223, 240, 0.993);
   border-radius: 20px;
   border-color: rgb(252, 195, 226);
- 
   font: normal 16px Lobster;
   width: 40%;
  }
@@ -36,7 +35,7 @@ fieldset{
   display: flex;
   color:#d80073;
   font-family: 'Pacifico', cursive;
-  font-size: 18px;
+  font-size: 20px;
   text-shadow: 2px 1px 3px white;
 }
 
@@ -53,7 +52,7 @@ input[type=number]{
   display: block;
   color:#d80073;
   font-family: 'Pacifico', cursive;
-  font-size: 16px;
+  font-size: 18px;
   text-shadow: 2px 1px 3px white;
 }
 
