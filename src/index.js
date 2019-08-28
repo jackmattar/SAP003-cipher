@@ -52,6 +52,6 @@ function clear(event) {
   stringdecode.value="";
   offset.value="";
 
-  return res.innerHTML=("Preencha os dados");
+  return res.innerHTML=("");
   
 }
