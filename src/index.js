@@ -10,10 +10,6 @@ let res= document.getElementById("result");
 function cifrar(event) {
   event.preventDefault();
 
-  // document.getElementById("form").addEventListener("submit", event => {
-  
-  //   event.preventDefault();
-
     if ((offset.value === ""|| offset.value === 0) || stringencode.value === "") {
 
       return res.innerHTML=("Verifique os dados e tente novamente");
@@ -28,16 +24,10 @@ function cifrar(event) {
 
     }
 
-//  });
-
 }
 
 function decifrar(event) {
   event.preventDefault();
-
-  // document.getElementById("form").addEventListener("submit", event => {
-  
-  //   event.preventDefault();
 
     if ((offset.value === ""|| offset.value === 0) || stringdecode.value === "") {
 
@@ -53,21 +43,14 @@ function decifrar(event) {
 
     }
 
-  // });
-
 }
 
 function clear(event) {
   event.preventDefault();
-
-//  document.getElementById("form").addEventListener("submit", event => {
-  
-   
 
     stringencode.value="";
     stringdecode.value="";
     offset.value="";
     return res.innerHTML=("Preencha os dados");
   
-//  });
 }
