@@ -10,47 +10,48 @@ let res= document.getElementById("result");
 function cifrar(event) {
   event.preventDefault();
 
-    if ((offset.value === ""|| offset.value === 0) || stringencode.value === "") {
+  if ((offset.value === ""|| offset.value === 0) || stringencode.value === "") {
 
-      return res.innerHTML=("Verifique os dados e tente novamente");
+    return res.innerHTML=("Verifique os dados e tente novamente");
 
-    } else if (offset.value <0) {
+  } else if (offset.value <0) {
 
-      return res.innerHTML=( window.cipher.encode(-offset.value, stringencode.value));
+    return res.innerHTML=( window.cipher.encode(-offset.value, stringencode.value));
 
-    } else {
+  } else {
 
-      return res.innerHTML=( window.cipher.encode(offset.value, stringencode.value));
+    return res.innerHTML=( window.cipher.encode(offset.value, stringencode.value));
 
-    }
+  }
 
 }
 
 function decifrar(event) {
   event.preventDefault();
 
-    if ((offset.value === ""|| offset.value === 0) || stringdecode.value === "") {
+  if ((offset.value === ""|| offset.value === 0) || stringdecode.value === "") {
 
-      return res.innerHTML=("Verifique os dados e tente novamente");
+    return res.innerHTML=("Verifique os dados e tente novamente");
  
-    } else if (offset.value <0) {
+  } else if (offset.value <0) {
 
-      return res.innerHTML=( window.cipher.decode(-offset.value, stringdecode.value));
+    return res.innerHTML=( window.cipher.decode(-offset.value, stringdecode.value));
 
-    } else {
+  } else {
 
-      return res.innerHTML=( window.cipher.decode(offset.value, stringdecode.value));
+    return res.innerHTML=( window.cipher.decode(offset.value, stringdecode.value));
 
-    }
+  }
 
 }
 
 function clear(event) {
   event.preventDefault();
 
-    stringencode.value="";
-    stringdecode.value="";
-    offset.value="";
-    return res.innerHTML=("Preencha os dados");
+  stringencode.value="";
+  stringdecode.value="";
+  offset.value="";
+
+  return res.innerHTML=("Preencha os dados");
   
 }
