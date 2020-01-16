@@ -1,54 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
+    <title>Correio elegante</title>
   </head>
+
   <body>
-    <div id="root">
-      <header>
-        <h1>Correio Elegante</h1>
-      </header>
-    </div>
-
-    <section>
-      
-      <form id="form">
-        <fieldset id="first">
-          <p>
-            <label for="offset" class="offset"> Chave de Deslocamento <br></label>
-            <input type="number" id="offset">
-          </p>
-
-          <p>
-            <label for="stringencode" class="strings"> Cifrar Mensagem</label> 
-            <textarea id="stringencode" placeholder="Insira para cifrar"></textarea><br>
-            <input type= "submit" class="btncode" id="btnencode" value="Cifrar">
-          </p>
-
-          <p>
-            <label for="strindecode" class="strings"> Decifrar Mensagem</label>
-            <textarea type="text" id="stringdecode" placeholder="Insira para decifrar"></textarea><br>
-            <input type="submit" class="btndecoded" id="btndecoded" value="Decifrar" >
-          </p> 
-
-          <p>
-           <input type="submit" class="btnclear" id="btnclear" value="Limpar" >
-          </p> 
-
-        </fieldset>
-      </form>
-        <div class="result">
-          <h1 class="resultinside" id="titleresult">Sua mensagem é:</h1>
-          <div id="heart">
-           <p class="breakAll narow" id="result"></div>
+    <header>
+      Correio Elegante
+    </header>
+    <main class="main-container">
+      <nav class=" nav">
+        <form class="form">
+          <div class="form">
+            <label for="offset" class="titles">
+              Chave de Deslocamento
+            </label>
+            <input type="number" class="offset" />
           </div>
-        </div> 
-
-    </section>
-
-
+          <div class="form">
+            <label for="mensage" class="titles">
+              Insira sua mensagem
+            </label>
+            <textarea id="message" class='message-area'></textarea>
+          </div>
+          <div class=" main-container, buttons-container">
+            <button class="buttons">Cifrar</button>
+            <button class="buttons">Decifrar</button>
+            <button class="buttons">Limpar</button>
+          </div>
+        </form>
+      </nav>
+      <article class="result">
+          <h1 class="titleresult">Sua mensagem é:</h1>
+          <section class="heart">
+            <p class="result-message"> oi </p>
+          </section>
+      </article>
+    </main>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>

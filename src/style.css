@@ -3,8 +3,6 @@
 body{
   background: url(f5.png) no-repeat;
   background-size: cover;
-  padding: 5px;
-
 }
 
 header{
@@ -12,165 +10,133 @@ header{
   color:#d80073;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.144);
   text-align: center;
-  font-size: 2rem;
+  font-size: 4vw;
+  margin-bottom: 2vh
  }
 
-section{
-display: flex;
-justify-content: center;
+.main-container {
+  display: flex;
+  justify-content: center
+}
 
+.nav {
+  width: 25vw;
+  height: 80vh;
+  background: rgba(255, 223, 240, 0.993);
+  border-radius: 20px;
+  margin-right: 2vw
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2vh
 }
 
 
-fieldset{  
-  display: flex;
-  background: rgba(255, 223, 240, 0.993);
-  border-radius: 20px;
-  border-color: rgb(252, 195, 226);
-  font: normal 16px Lobster;
-  width: 40%;
- }
+input[type=number]{
+  text-align: center;
+  width: 20vw;
+  height: 4vh;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px  rgba(236, 79, 165, 0.644);
+  border: none
+}
 
-.offset{
-  display: flex;
+.titles{
   color:#d80073;
   font-family: 'Pacifico', cursive;
   font-size: 20px;
   text-shadow: 2px 1px 3px white;
 }
 
-input[type=number]{
-  display:block;
-  text-align: center;
-  width:250px;
-  border-radius: 4px;
-  box-shadow: 1px 1px 5px  rgba(236, 79, 165, 0.644);
-  
-}
-
-.strings{
-  display: block;
-  color:#d80073;
-  font-family: 'Pacifico', cursive;
-  font-size: 18px;
-  text-shadow: 2px 1px 3px white;
-}
-
-textarea{
-  display:block;
-  width: 95%;
-  height: 100px;
+.message-area{
+  width: 20vw;
+  height: 40vh;
   border-radius: 10px;
   padding: 05px;
   box-shadow: 2px 2px 10px  rgba(236, 79, 165, 0.644);
+  border: none
 }
 
-.btncode {
-	background-color:#f0218c;
+.buttons-container {
+  margin-top: 5vh
+}
+
+.article {
+  width: 50vw;
+  height: 80vh;
+  border: solid 1px #000;
+}
+
+.buttons {
+  box-shadow:inset 0px 1px 0px 0px #fbafe3;
+	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+	background-color:#ff5bb0;
 	border-radius:6px;
 	border:1px solid #ee1eb5;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font: normal 15px Trebuchet MS;
+	font-family:Arial;
+	font-size:18px;
 	font-weight:bold;
-	padding:6px 19px;
+	padding:9px 21px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #c70067;
 }
 
-.btndecoded {
-	background-color:#f0218c;
-	border-radius:6px;
-	border:1px solid #ee1eb5;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font: normal 15px Trebuchet MS;
-	font-weight:bold;
-	padding:6px 13px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #c70067;
+.buttons:hover {
+	background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+	background-color:#ef027d;
 }
-
-.btnclear {
-	background-color:#f0218c;
-	border-radius:6px;
-	border:1px solid #ee1eb5;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font: normal 15px Trebuchet MS;
-	font-weight:bold;
-	padding:6px 13px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #c70067;
-}
-
-
-.btndecoded:active {
+.buttons:active {
 	position:relative;
 	top:1px;
-}
-
-
-.btncode:active {
-	position:relative;
-	top:1px;
-}
-
-.btnclear {
-  position: relative;
-  top: 1px;
-
 }
 
 .result {  
   display: flex;
   flex-direction: column; 
-  width: 45%;
+  width: 50vw;
+  height: 78vh;
   color: rgb(80, 80, 80);
   background: url(xadrezazul.jpg);
   background-position: center;
   border-radius: 20px;
-  padding: 1%;
+  padding: 1vh;
 }
 
-#titleresult{
+.titleresult{
   display: flex;
   align-self: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.836);
   color:#0f64e4; 
   border-radius:15px;
-  width: 280px;
-  padding: 2px;
+  width: 20vw;
   box-shadow: 2px 2px 10px  rgba(89, 79, 236, 0.644);
-  /* text-shadow: 3px 2px 0px rgb(255, 255, 255); */
+  text-shadow: 3px 2px 0px rgb(255, 255, 255);
   font-family: 'Satisfy', cursive;
   font-size: 35px;
 }
 
-#heart {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  width: 550px;
+ .heart {
   height: 380px;
   background: url(heart.png) no-repeat;
   background-size: contain;
   background-position: center center;
-
 }
 
-#result {
-    padding: 5px;
-    display: flex;
-    align-self: center;
-    max-width: 280px;
-    max-height: 150px;
-    color: rgb(255, 255, 255);
-    word-break: break-word;
-    bottom: 10%;
-  }
-
+.result-message {
+  overflow: auto;
+  max-width: 20vw;
+  height: 25vh;
+  margin-left: 30%;
+  margin-top: 12%;
+  color: rgb(255, 255, 255);
+  word-break: break-word;
+  font-weight: bold
+}
