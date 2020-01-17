@@ -1,4 +1,4 @@
-let offset = document.querySelector('.offset');
+const offset = document.querySelector('.offset');
 const message = document.querySelector('.message-area');
 const buttons = document.querySelectorAll('.buttons');
 const resultMessage = document.querySelector('.result-message');
@@ -7,7 +7,7 @@ buttons.forEach(button => {
   button.addEventListener('click', (e) => {
     e.preventDefault();
     const txtButton = e.target.textContent;
-    let offsetValue = Number(offset.value);
+    const offsetValue = +offset.value;  
 
     if (txtButton === 'Limpar') {
       message.value = ''
